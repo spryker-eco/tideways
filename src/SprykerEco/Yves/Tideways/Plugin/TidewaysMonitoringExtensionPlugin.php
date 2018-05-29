@@ -7,8 +7,8 @@
 namespace SprykerEco\Yves\Tideways\Plugin;
 
 use Spryker\Yves\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
-use SprykerEco\Shared\Tideways\Plugin\NewRelicMonitoringExtensionPlugin as SharedTidewaysMonitoringExtensionPlugin;
+use SprykerEco\Shared\Tideways\Plugin\TidewaysMonitoringExtensionPlugin as SharedTidewaysMonitoringExtensionPlugin;
 
-class NewRelicMonitoringExtensionPlugin extends SharedTidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInterface
+class TidewaysMonitoringExtensionPlugin extends SharedTidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInterface
 {
 }
