@@ -32,13 +32,13 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
     }
 
     /**
-     * @param string $application
-     * @param string $store
-     * @param string $environment
+     * @param null|string $application
+     * @param null|string $store
+     * @param null|string $environment
      *
      * @return void
      */
-    public function setAppName(string $application, string $store, string $environment): void
+    public function setApplicationName(?string $application = null, ?string $store = null, ?string $environment = null): void
     {
         $name = $application . '-' . $store;
 
