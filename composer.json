@@ -4,7 +4,6 @@
   "license": "proprietary",
   "require": {
     "php": ">=7.1",
-    "tideways/profiler": "^2.0",
     "spryker/monitoring-extension": "^1.0.0"
   },
   "autoload": {
