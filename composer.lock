@@ -1,0 +1,50 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e7c7b5273fa24daa801a7fbb3307b318",
+    "packages": [
+        {
+            "name": "tideways/profiler",
+            "version": "v2.0.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tideways/profiler.git",
+                "reference": "271cad5546533995031a6191dfceb89cd0313a1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tideways/profiler/zipball/271cad5546533995031a6191dfceb89cd0313a1b",
+                "reference": "271cad5546533995031a6191dfceb89cd0313a1b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Tideways\\": "src/main"
+                },
+                "files": [
+                    "Tideways.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "apache-2.0"
+            ],
+            "description": "Client library that wraps Xhprof profile collection and sends to Tideways",
+            "time": "2018-05-15T12:12:16+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.1"
+    },
+    "platform-dev": []
+}
