@@ -18,3 +18,4 @@
 /node_modules/
 /tests/_output/*
 !/tests/_output/.gitkeep
+vendor
