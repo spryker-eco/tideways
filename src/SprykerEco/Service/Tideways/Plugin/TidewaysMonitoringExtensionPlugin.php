@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Copyright © 2018-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Shared\Tideways\Plugin;
+namespace SprykerEco\Service\Tideways\Plugin;
 
-use Spryker\Shared\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
+use Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
 use Tideways\Profiler;
 
 class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInterface
