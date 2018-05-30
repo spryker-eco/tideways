@@ -88,7 +88,6 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
     public function markAsConsoleCommand(): void
     {
         $name = isset($this->applicationName) ? $this->applicationName . '-CLI' : 'CLI';
-//            file_put_contents(APPLICATION_ROOT_DIR . '/tmmp.log', $name, FILE_APPEND); // TODO
         Profiler::setServiceName($name);
     }
 
