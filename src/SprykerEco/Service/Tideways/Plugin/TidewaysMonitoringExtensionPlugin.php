@@ -1,12 +1,13 @@
 <?php
+
 /**
- * Copyright © 2018-present Spryker Systems GmbH. All rights reserved.
+ * Apache OSL-2
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Shared\Tideways\Plugin;
+namespace SprykerEco\Service\Tideways\Plugin;
 
-use Spryker\Shared\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
+use Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
 use Tideways\Profiler;
 
 class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInterface
@@ -87,7 +88,6 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
     public function markAsConsoleCommand(): void
     {
         $name = isset($this->applicationName) ? $this->applicationName . '-CLI' : 'CLI';
-//            file_put_contents(APPLICATION_ROOT_DIR . '/tmmp.log', $name, FILE_APPEND); // TODO
         Profiler::setServiceName($name);
     }
 
