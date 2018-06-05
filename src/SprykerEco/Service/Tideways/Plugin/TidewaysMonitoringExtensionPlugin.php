@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright © 2018-present Spryker Systems GmbH. All rights reserved.
+ * Apache OSL-2
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
