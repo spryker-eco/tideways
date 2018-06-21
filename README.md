@@ -1,6 +1,6 @@
 # Tideways Module
 
-Module provides an extension plugin for Spryker's Monitoring module.
+Module provides an extension plugin for Sprykers Monitoring module.
 
 ## Installation
 
