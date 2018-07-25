@@ -3,3 +3,4 @@ parameters:
 
     ignoreErrors:
         - '#Static method .+Profiler::.+\(\) invoked with.+#'
+        - '#Call to .+ on an unknown class Tideways\\Profiler.#'
