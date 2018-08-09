@@ -1,0 +1,20 @@
+namespace: SprykerEcoTest\Zed\Tideways
+
+paths:
+    tests: .
+    data: ../../../_data
+    support: _support
+    log: ../../../_output
+
+coverage:
+    enabled: true
+    remote: false
+    whitelist: { include: ['../../../../src/*'] }
+
+suites:
+    Plugin:
+        path: Plugin/
+        class_name: SprykerEcoPluginTester
+        modules:
+            enabled:
+                - Asserts

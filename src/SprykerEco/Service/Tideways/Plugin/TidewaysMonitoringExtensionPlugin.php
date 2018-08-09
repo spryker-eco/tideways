@@ -1,12 +1,13 @@
 <?php
+
 /**
- * Copyright © 2018-present Spryker Systems GmbH. All rights reserved.
+ * Apache OSL-2
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerEco\Shared\Tideways\Plugin;
+namespace SprykerEco\Service\Tideways\Plugin;
 
-use Spryker\Shared\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
+use Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface;
 use Tideways\Profiler;
 
 class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInterface
@@ -15,6 +16,16 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      * @var string
      */
     protected $applicationName;
+
+    /**
+     * @var bool
+     */
+    protected $isActive;
+
+    public function __construct()
+    {
+        $this->isActive = class_exists('Tideways\Profiler');
+    }
 
     /**
      * Report an error at this line of code, with a complete stack trace.
@@ -26,6 +37,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function setError(string $message, $exception): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         if ($exception) {
             Profiler::logException($exception);
         }
@@ -40,6 +55,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function setApplicationName(?string $application = null, ?string $store = null, ?string $environment = null): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         $name = $application . '-' . $store;
 
         Profiler::setServiceName($name);
@@ -54,6 +73,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function setTransactionName(string $name): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::setTransactionName($name);
     }
 
@@ -62,6 +85,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function markStartTransaction(): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::start();
     }
 
@@ -70,6 +97,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function markEndOfTransaction(): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::stop();
     }
 
@@ -78,6 +109,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function markIgnoreTransaction(): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::ignoreTransaction();
     }
 
@@ -86,8 +121,11 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function markAsConsoleCommand(): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         $name = isset($this->applicationName) ? $this->applicationName . '-CLI' : 'CLI';
-//            file_put_contents(APPLICATION_ROOT_DIR . '/tmmp.log', $name, FILE_APPEND); // TODO
         Profiler::setServiceName($name);
     }
 
@@ -99,6 +137,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function addCustomParameter(string $key, $value): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::setCustomVariable($key, (string)$value);
     }
 
@@ -109,6 +151,10 @@ class TidewaysMonitoringExtensionPlugin implements MonitoringExtensionPluginInte
      */
     public function addCustomTracer(string $tracer = 'classname::function_name'): void
     {
+        if (!$this->isActive) {
+            return;
+        }
+
         Profiler::watch($tracer);
     }
 }
