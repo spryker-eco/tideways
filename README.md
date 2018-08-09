@@ -1,6 +1,6 @@
 # Tideways Module
 
-Module provides an extension plugin for Sprykers Monitoring module.
+Module provides an extension plugin for Spryker's Monitoring module.
 
 ## Installation
 
@@ -10,4 +10,4 @@ composer require spryker-eco/tideways
 
 ## Documentation
 
-[Module Documentation](https://academy.spryker.com/)
+[Tideways Installation](https://support.tideways.com/article/104-install-with-spryker)
