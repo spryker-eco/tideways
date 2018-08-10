@@ -10,4 +10,4 @@ composer require spryker-eco/tideways
 
 ## Documentation
 
-[Tideways Installation](https://support.tideways.com/article/104-install-with-spryker)
+[Tideways Installation](http://academy.spryker.com/developing_with_spryker/industry_partner_integration/performance_monitoring_tideways.html)
