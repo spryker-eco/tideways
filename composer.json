@@ -1,7 +1,7 @@
 {
   "name": "spryker-eco/tideways",
   "description": "Tideways module",
-  "license": "proprietary",
+  "license": "Apache-2.0",
   "require": {
     "php": ">=7.1",
     "spryker/monitoring-extension": "^1.0.0"
